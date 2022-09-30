@@ -1,0 +1,527 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Patrick Hand", cursive;
+}
+html,
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main_board {
+  background-color: #eee;
+  width: 720px;
+  height: 360px;
+  position: relative;
+}
+.game_board {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 640px;
+  height: 300px;
+  background-color: #ffffff;
+}
+
+.outer_box {
+  width: 640px;
+  height: 300px;
+  background-color: #42378f;
+  background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+  position: relative;
+  border-radius: 1000px;
+}
+.inner_box {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 540px;
+  height: 200px;
+  background-color: #ffffff;
+  border-radius: 1000px;
+  overflow: hidden;
+}
+.circle {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.active {
+  box-shadow: #e7b100 0px 0px 0px 2px;
+  background-color: #ffd700;
+}
+
+.circle img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+}
+.active img {
+  transform: scale(0.8);
+}
+.car1 {
+  top: 5px;
+  left: 300px;
+}
+.car2 {
+  top: 5px;
+  left: 344px;
+}
+.car3 {
+  top: 5px;
+  left: 388px;
+}
+.car4 {
+  top: 5px;
+  left: 432px;
+}
+.car5 {
+  top: 5px;
+  left: 476px;
+}
+.car6 {
+  top: 18px;
+  left: 522px;
+}
+.car7 {
+  top: 45px;
+  left: 560px;
+}
+.car8 {
+  top: 85px;
+  left: 585px;
+}
+.car9 {
+  top: 130px;
+  right: 5px;
+}
+.car10 {
+  top: 175px;
+  right: 15px;
+}
+.car11 {
+  top: 215px;
+  right: 40px;
+}
+.car12 {
+  top: 242px;
+  right: 78px;
+}
+.car13 {
+  bottom: 5px;
+  left: 476px;
+}
+.car14 {
+  bottom: 5px;
+  left: 432px;
+}
+.car15 {
+  bottom: 5px;
+  left: 388px;
+}
+.car16 {
+  bottom: 5px;
+  left: 344px;
+}
+.car17 {
+  bottom: 5px;
+  left: 300px;
+}
+.car18 {
+  bottom: 5px;
+  right: 344px;
+}
+.car19 {
+  bottom: 5px;
+  right: 388px;
+}
+
+.car20 {
+  bottom: 5px;
+  right: 432px;
+}
+.car21 {
+  bottom: 5px;
+  right: 476px;
+}
+.car22 {
+  top: 242px;
+  left: 78px;
+}
+.car23 {
+  top: 215px;
+  left: 40px;
+}
+.car24 {
+  top: 175px;
+  left: 15px;
+}
+.car25 {
+  top: 130px;
+  left: 5px;
+}
+.car26 {
+  top: 85px;
+  right: 585px;
+}
+.car27 {
+  top: 45px;
+  right: 560px;
+}
+.car28 {
+  top: 18px;
+  right: 522px;
+}
+.car29 {
+  top: 5px;
+  right: 476px;
+}
+.car30 {
+  top: 5px;
+  right: 432px;
+}
+.car31 {
+  top: 5px;
+  right: 388px;
+}
+.car32 {
+  top: 5px;
+  right: 344px;
+}
+
+.coin_bar {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 540px;
+  background-color: #a575ff;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.game_score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 25px;
+  border-radius: 100px;
+  background-color: #fff;
+}
+.level2Cars {
+  position: absolute;
+  top: 43px;
+  left: 0px;
+  width: 540px;
+  height: 77px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.level1Cars {
+  position: absolute;
+  bottom: 2px;
+  left: 0px;
+  width: 540px;
+  height: 77px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.boxl2 {
+  width: 132.5px;
+  height: 76px;
+  border-radius: 6px;
+  background-color: #ff6969;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.boxl2:hover {
+  cursor: pointer;
+  background-color: #ff3d3d;
+}
+.boxl1 {
+  width: 132.5px;
+  height: 76px;
+  border-radius: 6px;
+  background-color: #a575ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.boxl1:hover {
+  cursor: pointer;
+  background-color: #8748fc;
+}
+.car_coins {
+  width: 100%;
+  height: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-size: 12px;
+  opacity: 0;
+}
+.car_coins_on {
+  width: 100%;
+  background-color: none;
+  height: 37px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+.car_logo {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.car_logo img {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+}
+.car_logo p {
+  font-size: 16px;
+  margin-left: 4px;
+  color: #e0e0e0;
+}
+
+.current_stats {
+  position: absolute;
+  top: 0;
+  left: 640px;
+  width: 80px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+}
+.current_show {
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.current_show img {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+.prev_cars {
+  width: 40px;
+  height: 200px;
+  margin-top: 10px;
+  background-color: #3a3a3a;
+  border-radius: 4px;
+  overflow-y: auto;
+  background-image: linear-gradient(315deg, #897aeb 0%, #fd949b 74%);
+}
+.prev_cars::-webkit-scrollbar {
+  width: 3px;
+}
+.prev_cars::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+.prev_cars::-webkit-scrollbar-thumb {
+  background: #9496ff;
+  border-radius: 10px;
+}
+.prev_cars::-webkit-scrollbar-thumb:hover {
+  background: #7678ff;
+}
+.prev_cars div {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.prev_cars div img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+}
+.select_board {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 720px;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.profile {
+  width: 160px;
+  height: 50px;
+  background-color: #191d2b;
+  border-radius: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile1 {
+  width: 120px;
+  height: 50px;
+  background-color: #d8d8d8;
+  border-radius: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile2 {
+  width: 100px;
+  height: 50px;
+  background-color: #4a31a5;
+  border-radius: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile2:hover {
+  cursor: pointer;
+}
+.user_logo {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 230px;
+}
+.user_logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 500px;
+}
+.amount {
+  width: 110px;
+  height: 50px;
+}
+.amount span {
+  display: block;
+  text-align: center;
+}
+.amount span:last-child {
+  color: #e7e300;
+  letter-spacing: 1px;
+}
+.diff_coins {
+  width: 280px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(315deg, #897aeb 0%, #fd949b 74%);
+  border-radius: 200px;
+  align-items: center;
+}
+.diff_coins div {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 3px solid #3b3b3b;
+  border-bottom: 3px solid #3b3b3b;
+  margin: 0 5px;
+  border-left: 3px solid #fff;
+  border-right: 3px solid #fff;
+  color: #fff;
+  transform: rotateX(40deg);
+  transition: all 0.4s;
+}
+.diff_coins div:hover {
+  cursor: pointer;
+  transform: translateY(3px);
+  transition: all 0.4s;
+}
+#coin10 {
+  background-color: #1d9765;
+}
+#coin50 {
+  background-color: #2163a0;
+}
+#coin100 {
+  background-color: #693c91;
+}
+#coin500 {
+  background-color: #cd743d;
+}
+#coin1000 {
+  background-color: #d49b04;
+}
+.selectedCoin {
+  transform: translateY(-10px) rotateX(0deg) !important;
+}
+.profit {
+  color: #1d9765;
+}
+.loss {
+  color: #f53844;
+}
+.fullScreen {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+  color: #fff;
+  background-color: #444444;
+}
+.fullScreen:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 1240px) {
+  body {
+    transform: scale(1.75);
+    overflow: hidden;
+  }
+}
+@media only screen and (max-width: 740px) {
+  body {
+    min-height: auto;
+    min-width: 100vh;
+    transform: scale(0.95) rotate(90deg);
+    transition: all 0.5s;
+  }
+}
